@@ -1,0 +1,59 @@
+{
+  "_runtime-core.esm-bundler-Dr1X9nsB.js": {
+    "file": "js/runtime-core.esm-bundler-Dr1X9nsB.js",
+    "name": "runtime-core.esm-bundler"
+  },
+  "node_modules/vue/dist/vue.runtime.esm-bundler.js": {
+    "file": "js/vue.runtime.esm-bundler-D_x3A6D8.js",
+    "name": "vue.runtime.esm-bundler",
+    "src": "node_modules/vue/dist/vue.runtime.esm-bundler.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_runtime-core.esm-bundler-Dr1X9nsB.js"
+    ]
+  },
+  "resources/js/app.js": {
+    "file": "js/app.js",
+    "name": "app",
+    "src": "resources/js/app.js",
+    "isEntry": true,
+    "dynamicImports": [
+      "node_modules/vue/dist/vue.runtime.esm-bundler.js",
+      "resources/js/vue/components/Counter.vue",
+      "resources/js/vue/components/DataTable.vue",
+      "resources/js/vue/components/DynamicForm.vue"
+    ],
+    "css": [
+      "css/app.css"
+    ]
+  },
+  "resources/js/vue/components/Counter.vue": {
+    "file": "js/Counter-DrNRZsGk.js",
+    "name": "Counter",
+    "src": "resources/js/vue/components/Counter.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "_runtime-core.esm-bundler-Dr1X9nsB.js"
+    ]
+  },
+  "resources/js/vue/components/DataTable.vue": {
+    "file": "js/DataTable-gPucbVoC.js",
+    "name": "DataTable",
+    "src": "resources/js/vue/components/DataTable.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "node_modules/vue/dist/vue.runtime.esm-bundler.js",
+      "_runtime-core.esm-bundler-Dr1X9nsB.js"
+    ]
+  },
+  "resources/js/vue/components/DynamicForm.vue": {
+    "file": "js/DynamicForm-CxGKpvKz.js",
+    "name": "DynamicForm",
+    "src": "resources/js/vue/components/DynamicForm.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "node_modules/vue/dist/vue.runtime.esm-bundler.js",
+      "_runtime-core.esm-bundler-Dr1X9nsB.js"
+    ]
+  }
+}

@@ -1,0 +1,76 @@
+<div class="max-w-md mx-auto">
+    <div class="bg-white/70 backdrop-blur-xl rounded-3xl shadow-xl border border-gray-100 p-8">
+        <div class="text-center mb-8">
+            <div class="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <i class="fa-solid fa-user-plus text-green-500 text-2xl" aria-hidden="true"></i>
+            </div>
+            <h1 class="text-2xl font-bold text-gray-800">Inscription</h1>
+            <p class="text-gray-500 mt-2">Créez votre compte</p>
+        </div>
+        
+        <form action="<?php route('register'); ?>" method="POST" class="space-y-6">
+            <?= csrf_field() ?>
+            
+            <div>
+                <label for="name" class="block text-sm font-medium text-gray-700 mb-2">
+                    Nom
+                </label>
+                <input type="text" 
+                       id="name" 
+                       name="name" 
+                       required
+                       class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-green-400 focus:ring-2 focus:ring-green-100 outline-none transition-all"
+                       placeholder="Votre nom">
+            </div>
+            
+            <div>
+                <label for="email" class="block text-sm font-medium text-gray-700 mb-2">
+                    Email
+                </label>
+                <input type="email" 
+                       id="email" 
+                       name="email" 
+                       required
+                       class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-green-400 focus:ring-2 focus:ring-green-100 outline-none transition-all"
+                       placeholder="vous@exemple.com">
+            </div>
+            
+            <div>
+                <label for="password" class="block text-sm font-medium text-gray-700 mb-2">
+                    Mot de passe
+                </label>
+                <input type="password" 
+                       id="password" 
+                       name="password" 
+                       required
+                       minlength="8"
+                       class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-green-400 focus:ring-2 focus:ring-green-100 outline-none transition-all"
+                       placeholder="Minimum 8 caractères">
+            </div>
+            
+            <div>
+                <label for="password_confirm" class="block text-sm font-medium text-gray-700 mb-2">
+                    Confirmer le mot de passe
+                </label>
+                <input type="password" 
+                       id="password_confirm" 
+                       name="password_confirm" 
+                       required
+                       class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-green-400 focus:ring-2 focus:ring-green-100 outline-none transition-all"
+                       placeholder="••••••••">
+            </div>
+            
+            <button type="submit" 
+                    class="w-full py-3 bg-gradient-to-r from-green-500 to-green-600 text-white font-bold rounded-xl shadow-lg hover:shadow-xl transition-all">
+                Créer mon compte
+            </button>
+        </form>
+        
+        <p class="text-center text-gray-500 mt-6">
+            Déjà un compte ? 
+            <a href="<?php route('login'); ?>" class="text-blue-500 hover:underline font-medium">
+                Connectez-vous
+            </a>
+        </p>
+    </div>
+</div>

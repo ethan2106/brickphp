@@ -1,0 +1,439 @@
+{#
+    BrickPHP Home Page SUPERCAR - Lightweight Stack
+    PHP 8.3 + PHPStan Level 8 + Tailwind + Alpine.js
+    100% Type-Safe • Zero Errors • Production-Ready
+#}
+
+<div class="max-w-6xl mx-auto">
+
+    {# ========================================
+       HERO SECTION - Full Impact
+    ======================================== #}
+    <section class="text-center py-16 relative">
+        {# Background Decorations #}
+        <div class="absolute inset-0 overflow-hidden pointer-events-none">
+            <div class="absolute -top-20 -right-20 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl"></div>
+            <div class="absolute -bottom-20 -left-20 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl"></div>
+        </div>
+
+        <div class="relative">
+            {# Logo with Animation #}
+            <div class="mb-8 animate-bounce">
+                <span class="text-8xl md:text-9xl drop-shadow-lg" role="img" aria-label="BrickPHP Logo">🧱</span>
+            </div>
+
+            {# Title with Gradient #}
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight text-blue-600">
+                BrickPHP
+            </h1>
+
+            {# Version Badge #}
+            <div class="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-full text-sm font-medium mb-6 shadow-lg">
+                <i class="fa-solid fa-feather" aria-hidden="true"></i>
+                <span>SUPERCAR • Lightweight Edition</span>
+            </div>
+
+            {# Tagline #}
+            <p class="text-2xl md:text-3xl text-gray-600 mb-4 font-light">
+                {{ message }}
+            </p>
+
+            <p class="text-gray-500 italic text-lg mb-8">
+                "Simple, léger, efficace. PHPStan Level 8 certifié. Pas de magie, juste du code." 🎯
+            </p>
+
+            {# CTA Buttons #}
+            <div class="flex flex-wrap justify-center gap-4 mb-8">
+                <a href="/quickstart"
+                   class="inline-flex items-center gap-2 px-8 py-4 bg-blue-500 text-white font-bold rounded-2xl shadow-xl hover:bg-blue-600 hover:shadow-2xl transition-all">
+                    <i class="fa-solid fa-rocket" aria-hidden="true"></i>
+                    Commencer maintenant
+                </a>
+                <a href="/components"
+                   class="inline-flex items-center gap-2 px-8 py-4 bg-white text-gray-700 font-bold rounded-2xl shadow-lg hover:shadow-xl border-2 border-gray-200 hover:border-blue-300 transition-all">
+                    <i class="fa-solid fa-puzzle-piece text-blue-600" aria-hidden="true"></i>
+                    Voir les composants
+                </a>
+            </div>
+        </div>
+    </section>
+
+    {# ========================================
+       TECH STACK - SUPERCAR Lightweight
+    ======================================== #}
+    <section class="py-12">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-4">Stack Technologique SUPERCAR</h2>
+        <p class="text-center text-gray-500 mb-10 max-w-2xl mx-auto">
+            Une architecture légère et moderne — pas de build complexe
+        </p>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+            {# PHP 8.1+ - SVG inline car fa-brands ne charge pas #}
+            <div class="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-all group text-center">
+                <div class="w-16 h-16 bg-indigo-500 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform shadow-md">
+                    <svg class="w-10 h-10 text-white" viewBox="0 0 640 512" fill="currentColor"><path d="M320 104.5c171.4 0 303.2 72.2 303.2 151.5S491.3 407.5 320 407.5c-171.4 0-303.2-72.2-303.2-151.5S148.7 104.5 320 104.5m0-16.8C143.3 87.7 0 163 0 256s143.3 168.3 320 168.3S640 349 640 256 496.7 87.7 320 87.7zM218.2 242.5c-7.9 40.5-35.8 36.3-70.1 36.3l13.7-70.6c38 0 63.8-4.1 56.4 34.3zM97.4 350.3h36.7l8.7-44.8c41.1 0 66.6 3 90.2-19.1 26.1-24 32.9-66.7 14.3-88.1-9.7-11.2-25.3-16.7-46.5-16.7h-70.7L97.4 350.3zm185.7-213.6h36.5l-8.7 44.8c31.5 0 60.7-2.3 74.8 10.7 14.8 13.6 7.7 31-8.3 113.1h-37c15.4-79.4 18.3-86 12.7-92-5.4-5.8-17.7-4.6-47.4-4.6l-18.8 96.6h-36.5l32.7-168.6zM505 242.5c-8 41.1-36.7 36.3-70.1 36.3l13.7-70.6c38.2 0 63.8-4.1 56.4 34.3zM384.2 350.3H421l8.7-44.8c43.2 0 67.1 2.5 90.2-19.1 26.1-24 32.9-66.7 14.3-88.1-9.7-11.2-25.3-16.7-46.5-16.7H417l-32.8 168.7z"/></svg>
+                </div>
+                <h3 class="font-bold text-gray-800">PHP 8.1+</h3>
+                <p class="text-sm text-gray-500">Typed & Modern</p>
+            </div>
+
+            {# Tailwind #}
+            <div class="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 hover:shadow-xl hover:border-cyan-300 transition-all group text-center">
+                <div class="w-16 h-16 bg-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform shadow-md">
+                    <svg class="w-8 h-8 text-white" viewBox="0 0 54 33" fill="currentColor"><path d="M27 0c-7.2 0-11.7 3.6-13.5 10.8 2.7-3.6 5.85-4.95 9.45-4.05 2.054.514 3.522 2.004 5.147 3.653C30.744 13.09 33.808 16.2 40.5 16.2c7.2 0 11.7-3.6 13.5-10.8-2.7 3.6-5.85 4.95-9.45 4.05-2.054-.514-3.522-2.004-5.147-3.653C36.756 3.11 33.692 0 27 0zM13.5 16.2C6.3 16.2 1.8 19.8 0 27c2.7-3.6 5.85-4.95 9.45-4.05 2.054.514 3.522 2.004 5.147 3.653C17.244 29.29 20.308 32.4 27 32.4c7.2 0 11.7-3.6 13.5-10.8-2.7 3.6-5.85 4.95-9.45 4.05-2.054-.514-3.522-2.004-5.147-3.653C23.256 19.31 20.192 16.2 13.5 16.2z"/></svg>
+                </div>
+                <h3 class="font-bold text-gray-800">Tailwind 3.4</h3>
+                <p class="text-sm text-gray-500">Utility-first CSS</p>
+            </div>
+
+            {# Alpine.js - SVG officiel Alpine #}
+            <div class="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 hover:shadow-xl hover:border-sky-300 transition-all group text-center">
+                <div class="w-16 h-16 bg-sky-600 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform shadow-md">
+                    <svg class="w-8 h-8 text-white" viewBox="0 0 50 50" fill="currentColor"><path d="M25 3L3 25l10 10 12-12 12 12 10-10L25 3z"/></svg>
+                </div>
+                <h3 class="font-bold text-gray-800">Alpine.js</h3>
+                <p class="text-sm text-gray-500">Reactive sans build</p>
+            </div>
+
+            {# Twig (optional) #}
+            <div class="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 hover:shadow-xl hover:border-orange-300 transition-all group text-center">
+                <div class="w-16 h-16 bg-orange-500 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform shadow-md">
+                    <i class="fa-solid fa-leaf text-white text-2xl" aria-hidden="true"></i>
+                </div>
+                <h3 class="font-bold text-gray-800">Twig 3</h3>
+                <p class="text-sm text-gray-500">Templates (optionnel)</p>
+            </div>
+        </div>
+
+        {# What we removed #}
+        <div class="mt-10 bg-gradient-to-r from-green-50 to-emerald-50 border border-green-200 rounded-2xl p-6 max-w-3xl mx-auto">
+            <h3 class="font-bold text-green-800 mb-4 flex items-center gap-2 justify-center">
+                <i class="fa-solid fa-check-circle"></i> Pas de build complexe
+            </h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm text-green-700">
+                <div class="flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-xmark text-red-400"></i> Vite/Webpack
+                </div>
+                <div class="flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-xmark text-red-400"></i> TypeScript
+                </div>
+                <div class="flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-xmark text-red-400"></i> Vue/React
+                </div>
+                <div class="flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-xmark text-red-400"></i> node_modules géant
+                </div>
+            </div>
+            <p class="text-center text-green-600 mt-4 text-sm">
+                Juste <code class="bg-green-100 px-2 py-1 rounded">npm run build</code> pour compiler Tailwind ✓
+            </p>
+        </div>
+    </section>
+
+    {# ========================================
+       FEATURES GRID - Core Features
+    ======================================== #}
+    <section class="py-12">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-4">Fonctionnalités Clés</h2>
+        <p class="text-center text-gray-500 mb-10 max-w-2xl mx-auto">
+            Tout ce dont vous avez besoin pour créer des applications web professionnelles
+        </p>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {# MVC Architecture #}
+            <div class="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-all group">
+                <div class="w-14 h-14 bg-blue-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-lg">
+                    <i class="fa-solid fa-layer-group text-white text-xl" aria-hidden="true"></i>
+                </div>
+                <h3 class="font-bold text-gray-800 text-lg mb-2">Architecture MVC</h3>
+                <p class="text-gray-600 text-sm mb-3">Séparation claire entre Controllers, Models et Views pour un code maintenable.</p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded-full">Router</span>
+                    <span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded-full">Middleware</span>
+                    <span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded-full">PSR-4</span>
+                </div>
+            </div>
+
+            {# Alpine.js Reactivity #}
+            <div class="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-all group">
+                <div class="w-14 h-14 bg-sky-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-lg">
+                    <i class="fa-solid fa-bolt text-white text-xl" aria-hidden="true"></i>
+                </div>
+                <h3 class="font-bold text-gray-800 text-lg mb-2">Alpine.js Réactif</h3>
+                <p class="text-gray-600 text-sm mb-3">Interactivité légère directement dans le HTML, sans étape de build.</p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-2 py-1 bg-sky-100 text-sky-700 text-xs rounded-full">x-data</span>
+                    <span class="px-2 py-1 bg-sky-100 text-sky-700 text-xs rounded-full">x-show</span>
+                    <span class="px-2 py-1 bg-sky-100 text-sky-700 text-xs rounded-full">14kb</span>
+                </div>
+            </div>
+
+            {# Security #}
+            <div class="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-all group">
+                <div class="w-14 h-14 bg-red-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-lg">
+                    <i class="fa-solid fa-shield-halved text-white text-xl" aria-hidden="true"></i>
+                </div>
+                <h3 class="font-bold text-gray-800 text-lg mb-2">Sécurité Renforcée</h3>
+                <p class="text-gray-600 text-sm mb-3">Protection CSRF, XSS, SQL Injection intégrée. Sessions sécurisées.</p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-2 py-1 bg-red-100 text-red-700 text-xs rounded-full">CSRF Token</span>
+                    <span class="px-2 py-1 bg-red-100 text-red-700 text-xs rounded-full">PDO Prepared</span>
+                    <span class="px-2 py-1 bg-red-100 text-red-700 text-xs rounded-full">XSS Filter</span>
+                </div>
+            </div>
+
+            {# Router #}
+            <div class="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-all group">
+                <div class="w-14 h-14 bg-purple-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-lg">
+                    <i class="fa-solid fa-route text-white text-xl" aria-hidden="true"></i>
+                </div>
+                <h3 class="font-bold text-gray-800 text-lg mb-2">Router Avancé</h3>
+                <p class="text-gray-600 text-sm mb-3">Routes RESTful, groupes avec middleware, contraintes regex et cache.</p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-2 py-1 bg-purple-100 text-purple-700 text-xs rounded-full">RESTful</span>
+                    <span class="px-2 py-1 bg-purple-100 text-purple-700 text-xs rounded-full">Regex</span>
+                    <span class="px-2 py-1 bg-purple-100 text-purple-700 text-xs rounded-full">Cache</span>
+                </div>
+            </div>
+
+            {# Twig Templates #}
+            <div class="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-all group">
+                <div class="w-14 h-14 bg-orange-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-lg">
+                    <i class="fa-solid fa-leaf text-white text-xl" aria-hidden="true"></i>
+                </div>
+                <h3 class="font-bold text-gray-800 text-lg mb-2">Templates Twig</h3>
+                <p class="text-gray-600 text-sm mb-3">Moteur optionnel avec auto-escape XSS, héritage et syntaxe élégante.</p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-2 py-1 bg-orange-100 text-orange-700 text-xs rounded-full">Auto-escape</span>
+                    <span class="px-2 py-1 bg-orange-100 text-orange-700 text-xs rounded-full">Caching</span>
+                    <span class="px-2 py-1 bg-orange-100 text-orange-700 text-xs rounded-full">Optionnel</span>
+                </div>
+            </div>
+
+            {# Testing #}
+            <div class="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-all group">
+                <div class="w-14 h-14 bg-amber-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-lg">
+                    <i class="fa-solid fa-vial text-white text-xl" aria-hidden="true"></i>
+                </div>
+                <h3 class="font-bold text-gray-800 text-lg mb-2">Tests & Qualité</h3>
+                <p class="text-gray-600 text-sm mb-3">PHPUnit, PHPStan Level 8, CS-Fixer pour du code parfait.</p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-2 py-1 bg-amber-100 text-amber-700 text-xs rounded-full">PHPUnit</span>
+                    <span class="px-2 py-1 bg-amber-100 text-amber-700 text-xs rounded-full">PHPStan Level 8</span>
+                    <span class="px-2 py-1 bg-amber-100 text-amber-700 text-xs rounded-full">CS-Fixer</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {# ========================================
+       WHY BRICKPHP - Quick Benefits
+    ======================================== #}
+    <section class="py-12">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-10">Pourquoi BrickPHP ?</h2>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div class="text-center group">
+                <div class="w-20 h-20 bg-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-110 transition-transform">
+                    <i class="fa-solid fa-feather text-white text-3xl" aria-hidden="true"></i>
+                </div>
+                <h3 class="font-bold text-gray-800 text-lg">Léger</h3>
+                <p class="text-sm text-gray-500">Pas de bloat inutile</p>
+            </div>
+
+            <div class="text-center group">
+                <div class="w-20 h-20 bg-green-500 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-110 transition-transform">
+                    <i class="fa-solid fa-gauge-high text-white text-3xl" aria-hidden="true"></i>
+                </div>
+                <h3 class="font-bold text-gray-800 text-lg">Rapide</h3>
+                <p class="text-sm text-gray-500">Prêt en 3 minutes</p>
+            </div>
+
+            <div class="text-center group">
+                <div class="w-20 h-20 bg-purple-500 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-110 transition-transform">
+                    <i class="fa-solid fa-shield-halved text-white text-3xl" aria-hidden="true"></i>
+                </div>
+                <h3 class="font-bold text-gray-800 text-lg">Sécurisé</h3>
+                <p class="text-sm text-gray-500">CSRF, XSS, SQLi protégé</p>
+            </div>
+
+            <div class="text-center group">
+                <div class="w-20 h-20 bg-orange-500 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-110 transition-transform">
+                    <i class="fa-solid fa-shapes text-white text-3xl" aria-hidden="true"></i>
+                </div>
+                <h3 class="font-bold text-gray-800 text-lg">Flexible</h3>
+                <p class="text-sm text-gray-500">Ton code, tes règles</p>
+            </div>
+        </div>
+    </section>
+
+    {# ========================================
+       ALPINE.JS LIVE DEMO
+    ======================================== #}
+    <section class="py-12">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-4">Alpine.js en Action</h2>
+        <p class="text-center text-gray-500 mb-10 max-w-2xl mx-auto">
+            Interactivité directement dans le HTML — aucun build requis
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            {# Counter Demo #}
+            <div class="bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
+                <h3 class="font-bold text-gray-800 mb-4 flex items-center gap-2">
+                    <i class="fa-solid fa-plus-minus text-blue-500"></i>
+                    Compteur
+                </h3>
+                <div x-data="{ count: 0 }" class="flex items-center justify-center gap-4">
+                    <button @click="count--" class="w-12 h-12 bg-red-100 text-red-600 rounded-xl font-bold text-xl hover:bg-red-200 transition">−</button>
+                    <span x-text="count" class="text-3xl font-bold text-gray-800 w-16 text-center"></span>
+                    <button @click="count++" class="w-12 h-12 bg-green-100 text-green-600 rounded-xl font-bold text-xl hover:bg-green-200 transition">+</button>
+                </div>
+                <pre class="mt-4 bg-gray-100 rounded-lg p-3 text-xs overflow-x-auto"><code>&lt;div x-data="{ count: 0 }"&gt;
+  &lt;button @click="count--"&gt;−&lt;/button&gt;
+  &lt;span x-text="count"&gt;&lt;/span&gt;
+  &lt;button @click="count++"&gt;+&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+
+            {# Toggle Demo #}
+            <div class="bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
+                <h3 class="font-bold text-gray-800 mb-4 flex items-center gap-2">
+                    <i class="fa-solid fa-toggle-on text-purple-500"></i>
+                    Toggle
+                </h3>
+                <div x-data="{ open: false }" class="text-center">
+                    <button @click="open = !open" class="px-6 py-3 bg-purple-500 text-white rounded-xl font-medium hover:bg-purple-600 transition">
+                        <span x-text="open ? 'Masquer' : 'Afficher'"></span>
+                    </button>
+                    <div x-show="open" x-transition class="mt-4 p-4 bg-purple-50 rounded-xl text-purple-700">
+                        🎉 Contenu révélé avec Alpine.js !
+                    </div>
+                </div>
+                <pre class="mt-4 bg-gray-100 rounded-lg p-3 text-xs overflow-x-auto"><code>&lt;div x-data="{ open: false }"&gt;
+  &lt;button @click="open = !open"&gt;Toggle&lt;/button&gt;
+  &lt;div x-show="open" x-transition&gt;...&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+        </div>
+    </section>
+
+    {# ========================================
+       CODE PREVIEW - Show the Elegance
+    ======================================== #}
+    <section class="py-12">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-4">Code Élégant</h2>
+        <p class="text-center text-gray-500 mb-10 max-w-2xl mx-auto">
+            Une syntaxe claire et intuitive pour un développement rapide
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-6">
+            {# Controller Example #}
+            <div class="bg-gray-900 rounded-2xl overflow-hidden shadow-2xl">
+                <div class="flex items-center gap-2 px-4 py-3 bg-gray-800 border-b border-gray-700">
+                    <div class="flex gap-1.5">
+                        <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                        <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                        <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                    </div>
+                    <span class="text-gray-400 text-sm font-mono ml-2">HomeController.php</span>
+                </div>
+                <pre class="p-4 text-sm overflow-x-auto"><code class="text-gray-300"><span class="text-purple-400">class</span> <span class="text-yellow-300">HomeController</span> <span class="text-purple-400">extends</span> <span class="text-yellow-300">BaseController</span>
+{
+    <span class="text-purple-400">public function</span> <span class="text-blue-300">index</span>(): <span class="text-green-300">void</span>
+    {
+        <span class="text-purple-400">$this</span>-><span class="text-blue-300">render</span>(<span class="text-orange-300">'home'</span>, [
+            <span class="text-orange-300">'title'</span> => <span class="text-orange-300">'Accueil'</span>,
+            <span class="text-orange-300">'message'</span> => <span class="text-orange-300">'Bienvenue !'</span>,
+        ]);
+    }
+}</code></pre>
+            </div>
+
+            {# View Example with Alpine #}
+            <div class="bg-gray-900 rounded-2xl overflow-hidden shadow-2xl">
+                <div class="flex items-center gap-2 px-4 py-3 bg-gray-800 border-b border-gray-700">
+                    <div class="flex gap-1.5">
+                        <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                        <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                        <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                    </div>
+                    <span class="text-gray-400 text-sm font-mono ml-2">home.php + Alpine.js</span>
+                </div>
+                <pre class="p-4 text-sm overflow-x-auto"><code class="text-gray-300"><span class="text-gray-500">&lt;!-- PHP + Alpine.js --&gt;</span>
+<span class="text-pink-400">&lt;h1&gt;</span><span class="text-green-400">&lt;?= e($title) ?&gt;</span><span class="text-pink-400">&lt;/h1&gt;</span>
+
+<span class="text-pink-400">&lt;div</span> <span class="text-yellow-300">x-data</span>=<span class="text-orange-300">"{ open: false }"</span><span class="text-pink-400">&gt;</span>
+    <span class="text-pink-400">&lt;button</span> <span class="text-yellow-300">@click</span>=<span class="text-orange-300">"open = !open"</span><span class="text-pink-400">&gt;</span>
+        Menu
+    <span class="text-pink-400">&lt;/button&gt;</span>
+    <span class="text-pink-400">&lt;nav</span> <span class="text-yellow-300">x-show</span>=<span class="text-orange-300">"open"</span> <span class="text-yellow-300">x-transition</span><span class="text-pink-400">&gt;</span>
+        <span class="text-gray-500">&lt;!-- Navigation items --&gt;</span>
+    <span class="text-pink-400">&lt;/nav&gt;</span>
+<span class="text-pink-400">&lt;/div&gt;</span></code></pre>
+            </div>
+        </div>
+    </section>
+
+    {# ========================================
+       CALL TO ACTION - Final Push
+    ======================================== #}
+    <section class="py-12">
+        <div class="bg-gradient-to-r from-blue-500 to-purple-500 rounded-3xl p-10 text-center shadow-2xl">
+            <h2 class="text-4xl font-extrabold mb-4 text-white">Prêt à construire ?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto text-white/90">
+                Commence avec BrickPHP et crée des applications web modernes — sans la complexité.
+            </p>
+
+            {% if not app.session.user is defined %}
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="/register"
+                   class="inline-flex items-center gap-2 px-8 py-4 bg-white text-blue-600 font-bold rounded-xl shadow-xl hover:shadow-2xl transition-all">
+                    <i class="fa-solid fa-user-plus" aria-hidden="true"></i>
+                    S'inscrire gratuitement
+                </a>
+                <a href="/login"
+                   class="inline-flex items-center gap-2 px-8 py-4 bg-blue-600 text-white font-bold rounded-xl shadow-lg hover:bg-blue-700 transition-all">
+                    <i class="fa-solid fa-right-to-bracket" aria-hidden="true"></i>
+                    Se connecter
+                </a>
+            </div>
+            {% else %}
+            <div class="bg-white/20 backdrop-blur rounded-2xl p-6 inline-block">
+                <i class="fa-solid fa-circle-check text-white text-4xl mb-3" aria-hidden="true"></i>
+                <p class="text-xl font-medium text-white">
+                    Bienvenue, {{ app.session.user.name }} !
+                </p>
+                <a href="/components" class="inline-flex items-center gap-2 mt-4 px-6 py-3 bg-white text-blue-600 font-bold rounded-xl hover:shadow-xl transition-all">
+                    <i class="fa-solid fa-puzzle-piece" aria-hidden="true"></i>
+                    Explorer les composants
+                </a>
+            </div>
+            {% endif %}
+        </div>
+    </section>
+
+    {# ========================================
+       FOOTER INFO
+    ======================================== #}
+    <section class="py-8 text-center">
+        <div class="flex flex-wrap justify-center gap-6 text-gray-500 text-sm">
+            <span class="flex items-center gap-2">
+                <i class="fa-solid fa-code" aria-hidden="true"></i>
+                Open Source MIT
+            </span>
+            <span class="flex items-center gap-2">
+                <i class="fa-solid fa-code-branch" aria-hidden="true"></i>
+                SUPERCAR
+            </span>
+            <span class="flex items-center gap-2">
+                <i class="fa-solid fa-server" aria-hidden="true"></i>
+                PHP 8.1+ • Tailwind • Alpine.js
+            </span>
+            <span class="flex items-center gap-2">
+                <i class="fa-solid fa-heart text-red-500" aria-hidden="true"></i>
+                Made with passion
+            </span>
+        </div>
+    </section>
+
+</div>

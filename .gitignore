@@ -1,0 +1,74 @@
+# Dependencies
+/vendor/
+/node_modules/
+
+# Environment files
+.env
+.env.local
+.env.production
+.env.testing
+
+# Logs
+/logs/
+/*.log
+/logs/*.log
+
+# Cache
+/cache/
+/storage/cache/
+!/storage/cache/.gitkeep
+
+# Testing
+/phpunit.xml
+/infection.json5
+/phpmd.xml
+/phpstan.neon
+/coverage/
+/infection/
+/tests/_reports/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+
+# Composer
+composer.lock
+
+# NPM
+package-lock.json
+yarn.lock
+npm-debug.log*
+
+# Database
+*.sqlite
+*.db
+*.sqlite3
+
+# Documentation builds
+/docs/build/
+
+# PHP
+.phpunit.result.cache
+.php-cs-fixer.cache
+
+# Archives
+*.zip
+*.tar.gz
+*.rar

@@ -1,0 +1,51 @@
+<div class="max-w-md mx-auto">
+    <div class="bg-white/70 backdrop-blur-xl rounded-3xl shadow-xl border border-gray-100 p-8">
+        <div class="text-center mb-8">
+            <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <i class="fa-solid fa-right-to-bracket text-blue-500 text-2xl" aria-hidden="true"></i>
+            </div>
+            <h1 class="text-2xl font-bold text-gray-800">Connexion</h1>
+            <p class="text-gray-500 mt-2">Accédez à votre compte</p>
+        </div>
+        
+        <form action="<?php route('login'); ?>" method="POST" class="space-y-6">
+            <?= csrf_field() ?>
+            
+            <div>
+                <label for="email" class="block text-sm font-medium text-gray-700 mb-2">
+                    Email
+                </label>
+                <input type="email" 
+                       id="email" 
+                       name="email" 
+                       required
+                       class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-blue-400 focus:ring-2 focus:ring-blue-100 outline-none transition-all"
+                       placeholder="vous@exemple.com">
+            </div>
+            
+            <div>
+                <label for="password" class="block text-sm font-medium text-gray-700 mb-2">
+                    Mot de passe
+                </label>
+                <input type="password" 
+                       id="password" 
+                       name="password" 
+                       required
+                       class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-blue-400 focus:ring-2 focus:ring-blue-100 outline-none transition-all"
+                       placeholder="••••••••">
+            </div>
+            
+            <button type="submit" 
+                    class="w-full py-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-bold rounded-xl shadow-lg hover:shadow-xl transition-all">
+                Se connecter
+            </button>
+        </form>
+        
+        <p class="text-center text-gray-500 mt-6">
+            Pas encore de compte ? 
+            <a href="<?php route('register'); ?>" class="text-blue-500 hover:underline font-medium">
+                Inscrivez-vous
+            </a>
+        </p>
+    </div>
+</div>

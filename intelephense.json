@@ -1,0 +1,10 @@
+{
+    "environment": {
+        "includePaths": ["src/", "vendor/"]
+    },
+    "exclude": [
+        "**/site1/**",
+        "**/site4/**",
+        "**/cotransport-v2/**"
+    ]
+}

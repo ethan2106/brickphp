@@ -1,0 +1,64 @@
+{
+    "name": "brickphp/framework",
+    "description": "BrickPHP - Lightweight MVC framework for PHP 8.1+ with Tailwind CSS, Alpine.js and Twig",
+    "type": "library",
+    "license": "MIT",
+    "keywords": ["php", "framework", "mvc", "boilerplate", "tailwind", "alpinejs", "twig"],
+    "homepage": "https://github.com/votre-username/brickphp",
+    "authors": [
+        {
+            "name": "Votre Nom",
+            "email": "votre-email@example.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        },
+        "files": [
+            "src/Helper/functions.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "require": {
+        "php": ">=8.1",
+        "twig/twig": "^3.22"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.0",
+        "infection/infection": "^0.31.9",
+        "phpmd/phpmd": "^2.15",
+        "phpstan/phpstan": "^1.10",
+        "phpstan/phpstan-deprecation-rules": "^1.0",
+        "phpstan/phpstan-phpunit": "^1.0",
+        "phpstan/phpstan-strict-rules": "^1.0",
+        "phpunit/phpunit": "^10.0"
+    },
+    "scripts": {
+        "test": "phpunit",
+        "phpstan": "phpstan analyse",
+        "cs-check": "php-cs-fixer fix --dry-run --diff",
+        "cs-fix": "php-cs-fixer fix",
+        "phpmd": "phpmd src text phpmd.xml",
+        "infection": "infection --threads=4 --min-msi=93",
+        "quality": "php-cs-fixer fix && phpstan analyse && phpunit",
+        "check:all": [
+            "@cs-check",
+            "@phpstan",
+            "@phpmd",
+            "@test"
+        ]
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "infection/extension-installer": true
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
