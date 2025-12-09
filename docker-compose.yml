@@ -1,0 +1,63 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: brickphp-app
+    restart: unless-stopped
+    working_dir: /var/www/html
+    volumes:
+      - ./:/var/www/html
+    ports:
+      - "8000:80"
+    environment:
+      - APP_ENV=development
+      - APP_DEBUG=true
+      - DB_HOST=db
+      - DB_DATABASE=brickphp
+      - DB_USERNAME=brickphp
+      - DB_PASSWORD=secret
+    networks:
+      - brickphp-network
+    depends_on:
+      - db
+
+  db:
+    image: mysql:8.0
+    container_name: brickphp-db
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: brickphp
+      MYSQL_USER: brickphp
+      MYSQL_PASSWORD: secret
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "3306:3306"
+    volumes:
+      - dbdata:/var/lib/mysql
+    networks:
+      - brickphp-network
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: brickphp-phpmyadmin
+    restart: unless-stopped
+    ports:
+      - "8080:80"
+    environment:
+      PMA_HOST: db
+      PMA_PORT: 3306
+    networks:
+      - brickphp-network
+    depends_on:
+      - db
+
+networks:
+  brickphp-network:
+    driver: bridge
+
+volumes:
+  dbdata:
+    driver: local

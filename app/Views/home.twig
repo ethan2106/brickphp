@@ -1,0 +1,140 @@
+{% extends "layout.twig" %}
+
+{% block title %}{{ title }} - Fast & Secure PHP Framework{% endblock %}
+
+{% block content %}
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <!-- Hero Section -->
+    <div class="text-center mb-12" x-data="{ show: false }" x-init="setTimeout(() => show = true, 100)">
+        <div x-show="show" x-transition class="space-y-6">
+            <h1 class="text-6xl font-bold text-gray-900 mb-4">
+                🏎️ {{ title }}
+            </h1>
+            <p class="text-2xl text-gray-600 mb-8">
+                Lightning-fast MVC Framework for PHP {{ version }}+
+            </p>
+            <div class="flex justify-center space-x-4">
+                <a href="#features" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition duration-200">
+                    Get Started
+                </a>
+                <a href="https://github.com/ethan2106/brickphp" class="bg-gray-800 hover:bg-gray-900 text-white font-bold py-3 px-8 rounded-lg transition duration-200">
+                    View on GitHub
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <div id="features" class="mb-12">
+        <h2 class="text-4xl font-bold text-center text-gray-900 mb-8">
+            Core Features
+        </h2>
+        
+        <!-- Alpine.js Interactive Demo -->
+        <div x-data="{ selected: 0 }" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {% for feature in features %}
+            <div 
+                @click="selected = {{ loop.index0 }}"
+                :class="selected === {{ loop.index0 }} ? 'ring-4 ring-blue-500 shadow-2xl' : 'shadow-lg'"
+                class="bg-white p-6 rounded-lg cursor-pointer transform transition-all duration-200 hover:scale-105"
+            >
+                <div class="flex items-center mb-4">
+                    <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                        <span class="text-2xl">✓</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 ml-4">
+                        {{ feature }}
+                    </h3>
+                </div>
+                <p class="text-gray-600">
+                    Production-ready and fully tested
+                </p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- Security Features -->
+    <div class="bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl p-8 text-white mb-12">
+        <h2 class="text-3xl font-bold mb-4">🔒 Security First</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div>
+                <h3 class="text-xl font-semibold mb-2">CSRF Protection</h3>
+                <p>Built-in Cross-Site Request Forgery protection for all forms</p>
+            </div>
+            <div>
+                <h3 class="text-xl font-semibold mb-2">XSS Prevention</h3>
+                <p>Automatic output escaping and input sanitization</p>
+            </div>
+            <div>
+                <h3 class="text-xl font-semibold mb-2">SQL Injection</h3>
+                <p>Prepared statements and parameterized queries by default</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quality Tools -->
+    <div class="bg-white rounded-2xl shadow-xl p-8 mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6">🛠️ Development Tools</h2>
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+            <div class="text-center p-4 bg-gray-50 rounded-lg">
+                <div class="text-3xl mb-2">🧪</div>
+                <div class="font-semibold">PHPUnit</div>
+                <div class="text-sm text-gray-600">75+ Tests</div>
+            </div>
+            <div class="text-center p-4 bg-gray-50 rounded-lg">
+                <div class="text-3xl mb-2">🔍</div>
+                <div class="font-semibold">PHPStan</div>
+                <div class="text-sm text-gray-600">Level 8</div>
+            </div>
+            <div class="text-center p-4 bg-gray-50 rounded-lg">
+                <div class="text-3xl mb-2">🦠</div>
+                <div class="font-semibold">Infection</div>
+                <div class="text-sm text-gray-600">MSI 93%</div>
+            </div>
+            <div class="text-center p-4 bg-gray-50 rounded-lg">
+                <div class="text-3xl mb-2">📏</div>
+                <div class="font-semibold">PSR-12</div>
+                <div class="text-sm text-gray-600">Code Style</div>
+            </div>
+            <div class="text-center p-4 bg-gray-50 rounded-lg">
+                <div class="text-3xl mb-2">🔬</div>
+                <div class="font-semibold">PHPMD</div>
+                <div class="text-sm text-gray-600">Mess Detector</div>
+            </div>
+            <div class="text-center p-4 bg-gray-50 rounded-lg">
+                <div class="text-3xl mb-2">🐳</div>
+                <div class="font-semibold">Docker</div>
+                <div class="text-sm text-gray-600">Ready</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quick Start -->
+    <div class="bg-gray-900 rounded-2xl p-8 text-white">
+        <h2 class="text-3xl font-bold mb-4">⚡ Quick Start</h2>
+        <div class="bg-gray-800 rounded-lg p-6 font-mono text-sm">
+            <div class="text-green-400"># Install dependencies</div>
+            <div class="mb-4">composer install</div>
+            
+            <div class="text-green-400"># Configure environment</div>
+            <div class="mb-4">cp .env.example .env</div>
+            
+            <div class="text-green-400"># Run development server</div>
+            <div class="mb-4">php -S localhost:8000 -t public</div>
+            
+            <div class="text-green-400"># Run tests</div>
+            <div>composer test</div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    // Alpine.js component example
+    document.addEventListener('alpine:init', () => {
+        console.log('🏎️ BrickPHP SUPERCAR - Alpine.js loaded');
+    });
+</script>
+{% endblock %}
